@@ -1,0 +1,89 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #5a5a5a;
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+  text-align: center;
+  color: #ffffff;
+  font-size: 50px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 150px);
+  grid-template-rows: repeat(3, 150px);
+  justify-content: center;
+  gap: 0px;
+  width: 465px;
+  margin: 0 auto;
+  border-spacing: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.field {
+  background-color: #5a5a5a;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+}
+
+.field:hover {
+  background-color: #818181;
+}
+
+.field:not(:nth-child(3n)) {
+  border-right: 7px solid #ffffff;
+}
+
+.field:not(:nth-last-child(-n+3)) {
+  border-bottom: 7px solid #ffffff;
+}
+
+.winning-line {
+  position: absolute;
+  background-color: #ffffff;
+  height: 5px;
+  z-index: 1;
+}
+
+.winning-field {
+  border: none;
+}
+
+.f-u {
+  border-bottom: none !important;
+}
+
+.unclickable {
+
+  pointer-events: none;
+}
+
+.reset-button{
+
+  width: 220px;
+  height: 70px;
+  margin-top: 100px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 36px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #00B0EF;
+  background-color: #FFC000;
+  border-color: #00B0EF;
+  border-width: 5px;
+}
+
+.d-none{
+  display: none;
+}

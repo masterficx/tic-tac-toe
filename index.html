@@ -1,12 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tic Tac Toe</title>
-    <link rel="stylesheet" href="style.css">
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <script src="script.js"></script>
+  <h1>Tic Tac Toe</h1>
+  <div class="grid" id="game-container">
+    <div id="field1" class="field" onclick="makeMove(0, 0)"></div>
+    <div id="field2" class="field" onclick="makeMove(0, 1)"></div>
+    <div id="field3" class="field" onclick="makeMove(0, 2)"></div>
+    <div id="field4" class="field" onclick="makeMove(1, 0)"></div>
+    <div id="field5" class="field" onclick="makeMove(1, 1)"></div>
+    <div id="field6" class="field" onclick="makeMove(1, 2)"></div>
+    <div id="field7" class="field f-u" onclick="makeMove(2, 0)"></div>
+    <div id="field8" class="field" onclick="makeMove(2, 1)"></div>
+    <div id="field9" class="field" onclick="makeMove(2, 2)"></div>
+  </div>
+  <button class="reset-button d-none" id="reset-btn" onclick="resetGame()"><b>New game</b></button>
+  <script src="script.js"></script>
 </body>
 </html>
